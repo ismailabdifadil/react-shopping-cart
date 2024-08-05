@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+.menu {
+  display: flex;
+  margin: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+a {
+  text-decoration: none;
+}
+.logo {
+  font-size: 30px;
+  font-weight: 800;
+  /* text-transform: uppercase; */
+  color: #1877c9;
+  margin: 10px;
+}
+.links a {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px;
+  color: black;
+}
+.cart {
+  background: #1877c9;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 700px) {
+  .products {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 0 10px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  .products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 0 10px;
+  }
+}
+
+.product {
+  position: relative;
+}
+.product img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.btn {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: #1877c9;
+  border: none;
+  border-radius: 50%;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-secondary {
+  background-color: rgb(244, 46, 20);
+}
+
+.product-info {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  bottom: 6px;
+  right: 0;
+  left: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 20px 14px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 18px;
+}
+
+.add-to-cart {
+  background: #1877c9;
+  color: white;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  font-weight: 600;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 8px;
+  right: 8px;
+}
+
+.cart-container {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  border-radius: 10px;
+  gap: 20px;
+  padding: 30px;
+  place-content: center;
+}
+
+.cart-products {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  align-items: center;
+}
+
+.cart-product {
+  margin-top: 15px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  width: 95%;
+  place-content: center;
+  border-top: 1px solid #ccc;
+}
+
+.cart-product img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+.cart-title-img {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.cart-title-img * {
+  padding: 0 15px;
+}
+
+.cart-product span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.cart-product h5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.total-price {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.payment-card {
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 15px 0;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+.payment-card:hover,
+.selected {
+  background-color: rgba(24, 119, 201, 0.159);
+  border-color: rgb(8, 92, 165);
+}
+
+.form-control {
+  width: 94%;
+  margin: 0 12px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 18px;
+}
+
+.btn-processed {
+  background-color: rgb(24, 119, 201);
+  width: 94%;
+  margin: 10px 12px;
+  padding: 20px;
+  color: #fff;
+  font-size: 20px;
+  border: 0;
+  border-radius: 15px;
+  cursor: pointer;
+}
